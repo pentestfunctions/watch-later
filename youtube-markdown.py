@@ -72,7 +72,8 @@ def create_markdown_file(video_info, output_file='youtube_videos.md'):
     with open(output_file, 'w', encoding='utf-8') as file:
         file.write("# YouTube Video List\n\n")
         for index, info in enumerate(video_info, start=1):
-            shields = "[![Cybersecurity Shield](https://img.shields.io/badge/Cybersecurity-Video-red)](info['url']) [![Computer Science Shield](https://img.shields.io/badge/Computer%20Science-Video-brightgreen)](info['url'])"
+            #shields = "[![Cybersecurity Shield](https://img.shields.io/badge/Cybersecurity-Video-red)](info['url']) [![Computer Science Shield](https://img.shields.io/badge/Computer%20Science-Video-brightgreen)](info['url'])"
+            shields = ""
             emojis_in_title = get_emojis_for_keywords(info['title'])
             emojis_in_description = get_emojis_for_keywords(info.get('description', ''))
             all_emojis = emojis_in_title + emojis_in_description
